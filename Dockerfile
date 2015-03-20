@@ -145,7 +145,7 @@ RUN     cd ~/src \
         && python setup.py install
 
 # Realtime hack
-RUN     sed -e 's|var interval = 60;|var internal = 1;|g' -i /opt/graphite/webapp/content/js/*.js
+RUN     sed -e 's|var interval = 60;|var interval = 1;|g' -i /opt/graphite/webapp/content/js/*.js
 
 # Config files
 ADD     ./files/opt/graphite/conf/carbon.conf /opt/graphite/conf/carbon.conf
